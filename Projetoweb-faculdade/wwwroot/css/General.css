@@ -1,0 +1,124 @@
+﻿.brand-logo {
+    margin-left: 1em;
+    font-family: 'Satisfy', cursive;
+}
+
+
+header {
+    padding-top: 0.5em;
+    min-height: 65vh;
+    color: white;
+    background-image: url("../img/05f.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    header .container, #especialidades .container {
+        padding-top: 6vh;
+    }
+
+.container {
+    width: 90% !important;
+}
+
+header h1, header h2, h2 {
+    padding-right: 0;
+    font-size: 8em;
+    font-family: 'Satisfy', cursive;
+    margin-bottom: 0;
+}
+
+header h2, h2 {
+    font-size: 3em;
+}
+
+.row .button-group {
+    padding-top: 1.4em;
+}
+
+
+
+nav {
+    background-color: #01579b;
+}
+
+#especialidades, #depoimentos {
+    min-height: 40vh;
+    background-color: white;
+    color: #d84315;
+}
+
+
+
+main {
+    background-color: white;
+    width: 100%;
+}
+
+h3, .card-title, h4 {
+    font-family: 'Satisfy', cursive;
+    padding-bottom: 1em;
+}
+
+.card {
+    color: #616161;
+    border-radius: 4px;
+}
+
+#eventos {
+    margin-top: 6vh;
+    padding-top: 4vh;
+    padding-bottom: 0.6vh;
+    margin-bottom: 0;
+}
+
+    #eventos h3 {
+        padding-bottom: 0.5em;
+        color: white;
+    }
+
+
+.card .card-title {
+    font-size: 2em;
+}
+
+#reconhecimento {
+    background-image: url("../img/comidaBanner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+}
+
+#ifood {
+    background-image: url("../img/ifoodBanner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 20vh;
+}
+
+#depoimentos {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+    #depoimentos img {
+        height: 60px !important;
+        display: block;
+        margin: auto;
+        padding: 0;
+    }
+
+iframe {
+    margin-bottom: -22px;
+}
+
+footer img {
+    height: 30px;
+}
+
+footer ul li {
+    display: inline;
+    padding-left: 24px;
+}
