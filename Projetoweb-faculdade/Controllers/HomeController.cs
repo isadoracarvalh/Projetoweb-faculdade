@@ -1,9 +1,8 @@
-﻿using AspNetCore;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Projetoweb_faculdade.Controllers
 {
-    public class IndexController : Controller
+    public class HomeController : Controller
     {
         public ActionResult Index()
         {
