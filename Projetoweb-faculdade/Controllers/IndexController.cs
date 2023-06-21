@@ -6,6 +6,7 @@ namespace Projetoweb_faculdade.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.PartialBannerName = "_BannerPrincipal";
             return View();
         }
 

@@ -1,6 +1,45 @@
-﻿namespace Projetoweb_faculdade.wwwroot.css
-{
-    public class General
-    {
+﻿/* about us */
+
+
+
+header {
+    padding-top: 0.2em;
+    margin-top: 0;
+    min-height: 40vh;
+    color: white;
+    background-image: url("../img/05fcropped.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    header h1 {
+        font-size: 4.6em;
     }
+
+main {
+    padding-top: 3vh;
+}
+
+.about-us-images {
+    width: 100%;
+}
+
+p {
+    font-size: 1.1em;
+}
+main {
+    background-color: #fff8e1;
+}
+
+#events-list .card-title, #product-list .card-content h3 {
+    color: #01579b;
+}
+
+.note {
+    font-size: 0.8em;
+}
+
+.illustrative-image {
+    width: 100%;
+    padding-top: 30px;
 }

@@ -1,49 +1,123 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
+﻿@{
+    string PartialBannerName = ViewBag.PartialBannerName ??= "_Banner";
+
+}
+
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/General.css">
+    @RenderSection("style",false)
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Projetoweb_faculdade</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/General.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/About-css.css" asp-append-version="true" />
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projetoweb_faculdade</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="~/Home/Index" class="brand-logo">Bar da Graça</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="~/Home/Sobre">Sobre nós</a></li>
+                <li><a href="~/Home/Produtos">Cardápio</a></li>
+                <li><a href="~/Home/Eventos">Eventos</a></li>
+                <li><a href="~/Home/Encomendas">Encomendas</a></li>
+                <li><a href="https://www.ifood.com.br/delivery/ipatinga-mg/bar-da-graca-ltda---caravelas/03b5aba0-37fa-4a50-a0ec-1303a46f2cf0?utm_medium=share">Peça agora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    @Html.Partial(PartialBannerName)
+    <main>
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        @*Avaliações*@
+        <div class="row deep-orange lighten-5" id="depoimentos">
+            <div class="container">
+                <h3> O que os nossos clientes dizem... </h3>
+                <div class="row">
+                    <div class="col l4 s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <img src="~/img/rating.png">
+                                <span class="card-title">Melhor tempero da região</span>
+                                <p>Pode passar o tempo que for, mas nunca consegui e acredito que nunca vou conseguir encontrar um tempero igual daqui! É realmente um diferencial único, uma herança de família que faz toda a diferença. O sabor é maravilhoso, uma combinação perfeita de ingredientes que nos transporta para uma viagem gastronômica deliciosa. É um lugar que sempre vale a pena visitar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <img src="~/img/rating.png">
+                                <span class="card-title">Melhor caldo de Ipatinga!</span>
+                                <p>Há anos venho aqui, mesmo tendo me mudado de estado, e sempre faço questão de parar para saborear o caldo da Dona Graça! Além disso, aproveito para rever minhas amigas de longa data, Paulinha e Adriana. O caldo é realmente delicioso, feito com ingredientes frescos e um toque especial de sabores únicos. É uma parada obrigatória que sempre traz boas lembranças.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col l4 s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <img src="~/img/rating.png">
+                                <span class="card-title">Ambiente acolhedor</span>
+                                <p>Sempre venho com minha família e posso dizer que é um lugar ideal para isso! Nunca presenciei nenhum clima de bagunça ou tive algum tipo de conflito com os outros clientes. O ambiente é acolhedor e tranquilo, proporcionando momentos agradáveis para desfrutar em família. Além disso, o atendimento é sempre cordial e amigável. É um local onde nos sentimos bem-vindos .</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.8850002311856!2d-42.5361543!3d-19.460524399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb0003477eb7b29%3A0x5d22706f5d609dfe!2sR.%20Goi%C3%A2nia%2C%20575%20-%20Caravelas%2C%20Ipatinga%20-%20MG%2C%2035164-275!5e0!3m2!1spt-BR!2sbr!4v1682354848892!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+    <footer class="page-footer deep-orange darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Bar da Graça</h5>
+                    <p class="grey-text text-lighten-4">R. Goiânia, 575 <br> Caravelas, Ipatinga - MG, 35164-275.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"><img src="~/img/insta.png" alt="instagram"></a></li>
+                        <li><a href="https://www.ifood.com.br/delivery/ipatinga-mg/bar-da-graca-ltda---caravelas/03b5aba0-37fa-4a50-a0ec-1303a46f2cf0?utm_medium=share" class="grey-text text-lighten-3" href="#!"><img src="~/img/ifood.svg" alt="ifood"></a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Projetoweb_faculdade - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023
+            </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
